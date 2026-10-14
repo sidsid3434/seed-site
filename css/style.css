@@ -1,0 +1,50 @@
+:root{
+  --soil:#2b2118; --bark:#4a3728; --clay:#a0522d; --ember:#c8742c;
+  --wheat:#e9d8b4; --cream:#f6efe2; --moss:#5b6b3a; --ink:#2a2420;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--cream);color:var(--ink);font:18px/1.6 var(--serif)}
+a{color:var(--clay)}
+.sr{position:absolute;left:-9999px}
+.hero{
+  --hero:url('../images/hero-golden-hour.jpg');
+  min-height:100vh;display:flex;flex-direction:column;color:var(--cream);
+  background:linear-gradient(180deg,rgba(43,33,24,.25),rgba(43,33,24,.75)),
+    var(--hero) center/cover no-repeat,
+    linear-gradient(160deg,#f2b25c 0%,#c8742c 40%,#6b3f1f 75%,#2b2118 100%);
+}
+.hero-small{min-height:55vh}
+.nav{display:flex;gap:1.5rem;padding:1.25rem 6vw;font:500 .8rem var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.nav a{color:var(--cream);text-decoration:none}
+.nav .mark{margin-right:auto;font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:1.1rem}
+.hero-inner{margin:auto 0 12vh;padding:0 6vw;max-width:62rem}
+.hero h1{font-weight:400;font-size:clamp(2.1rem,6vw,4.4rem);line-height:1.08;letter-spacing:-.01em}
+.lede{margin-top:1.25rem;font-style:italic;color:var(--wheat);font-size:1.15rem}
+.section{padding:clamp(4rem,10vw,7rem) 6vw;max-width:60rem;margin:0 auto}
+.alt{background:var(--wheat);max-width:none}
+.alt>*{max-width:48rem;margin-left:auto;margin-right:auto}
+.eyebrow{font:600 .75rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--moss);margin-bottom:1rem}
+.hero .eyebrow{color:var(--wheat)}
+h2{font-weight:400;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin-bottom:1.75rem;color:var(--soil)}
+.lines p{margin:.4rem 0;font-size:1.2rem}
+.lines p:first-child{font-style:italic}
+.cards{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
+.card{background:#fffaf1;border:1px solid #e0cfae;padding:0 0 1.25rem}
+.card-img{aspect-ratio:4/5;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),var(--img) center/cover,linear-gradient(150deg,var(--ember),var(--bark));margin-bottom:1rem}
+.card h3,.card p,.card a{padding:0 1.1rem}
+.card h3{font-weight:400;font-size:1.4rem;color:var(--soil)}
+.card p{font-size:1rem;color:var(--bark)}
+.card a{display:block;margin-top:.75rem;font:600 .8rem var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.card .soon{color:#9c8a70}
+.btn-ghost{display:inline-block;margin-top:2rem;padding:.8rem 1.4rem;border:1px solid var(--soil);color:var(--soil);text-decoration:none;font:600 .8rem var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.btn-ghost:hover{background:var(--soil);color:var(--cream)}
+.invite{text-align:center;max-width:none;background:var(--soil);color:var(--wheat)}
+.invite h2{color:var(--cream)}
+.signup{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.signup input{flex:1 1 16rem;max-width:22rem;padding:.85rem 1rem;border:1px solid var(--bark);background:#3a2d22;color:var(--cream);font:1rem var(--serif)}
+.signup button{padding:.85rem 1.4rem;border:0;background:var(--ember);color:var(--soil);font:600 .85rem var(--sans);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.form-msg{margin-top:2rem;font-style:italic}
+.footer{padding:2rem 6vw;font:.8rem/1.6 var(--sans);color:#8a7a64;text-align:center;background:#221a13}
+@media(max-width:600px){body{font-size:17px}.nav{gap:1rem}.nav a:not(.mark){font-size:.7rem}}
